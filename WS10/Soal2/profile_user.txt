@@ -1,0 +1,7 @@
+#Format Username:Firstname:Lastname:Telephone number
+
+dodi:Dodi:Sutardi:087888999123 
+hana:Hana:Bunga:08123123222 
+kiki:Kiki:Partuman:08812923121 
+dodi:Dodi:Sutardi:087888999123 
+luna:Luna:Tayo:08567612371

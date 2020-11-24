@@ -1,0 +1,23 @@
+#!/bin/sh
+
+separator="==============================================="
+separator1="-----------------------------------------------"
+default_tab="
+                  "
+echo $(date)
+printf '%b\n' "${separator}"
+printf '%b MAIN MENU\n' "${default_tab}"
+printf '%b\n' "${separator}"
+printf '1. Operating System Info \n2. Hardware List \n3. Free and Used Memory\n4. Hardware Detail\n5. Exit\n'
+printf 'choose 1-5:'
+read -r choose
+if [ "$choose" -eq "1" ];
+then 
+	printf '%b\n' "${separator1}"
+	printf '%b SYSTEM STATUS\n' "${default_tab}"
+	printf '%b\n' "$separator1"
+	echo Username : $(whoami)
+	echo Uptime : $(uptime | awk '{print $3 $4}')
+	echo IP : $(ip addr show scope global | awk '$1 ~ /^inet/ {print $2}')
+	echo Hostname : $(hostname)
+fi
